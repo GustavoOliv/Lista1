@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(){
+  float n1 = 0, n2 = 0, n3 = 0, media = 0;
+  
+  printf("Calcule sua média\n");
+  printf("Nota da unidade 1: ");
+  scanf("%f", &n1);
+  printf("Nota da unidade 2: ");
+  scanf("%f", &n2);
+  printf("Nota da unidade 3: ");
+  scanf("%f", &n3);
+  media = (n1+n2+n3)/3;
+
+  if(media < 5 || n1 < 3 || n2 < 3 || n3 < 3){
+    printf("Media (%3.1f + %3.1f + %3.1f)/3 = %3.1f.\n", n1, n2, n3, media);
+    printf("Reprovado, se alguma unidade for abixo de 3 fazer a reposição ");
+    goto end;
+  }
+  if(media >= 7){
+    printf("Media: (%3.1f + %3.1f + %3.1f)/3 = %3.1f\n", n1, n2, n3, media);
+    printf("Aprovado");
+    goto end;
+  }
+  if(media >= 5){
+    if(n1 > 3 && n2 > 3 && n3 > 3){
+      printf("Media: (%3.1f + %3.1f + %3.1f)/3 = %3.1f.\n", n1, n2, n3, media); 
+      printf("Aprovado por média");
+    }
+  }
+  end:
+
+  return 0;
+}
