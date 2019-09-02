@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  int a, b;
+
+  printf("Digite o numero A: ");
+  scanf("%d", &a);
+  printf("Digite o numero B: ");
+  scanf("%d", &b);
+
+  if(a>b){
+    printf("A = %d > B = %d", a, b);
+  }
+  if(b>a){
+    printf("B = %d > A = %d", b, a);
+  }
+  if(a==b){
+    printf("A = B = %d", a);
+  }
+  
+  return 0;
+}
