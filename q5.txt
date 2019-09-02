@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+  float r, h, al, v, ab, at;
+
+  printf("Digite o raio do cilindro: \n");
+  scanf("%f", &r);
+  printf("Digite a altura do cilindro: \n");
+  scanf("%f", &h);
+
+  ab = 3.14*(r*r);
+  al = 2*3.14*r*h;
+  at = (2*ab)+al;
+  v = ab*h;
+
+printf("Volume = %3.1f\n", v);
+printf("Área da base = %3.1f, Área lateral = %3.1f, Área total = %3.1f\n", ab, al, at);
+  return 0;
+}
