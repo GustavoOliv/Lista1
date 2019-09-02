@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+  float precoi = 0, imp = 0, lucrod = 0, precof = 0;
+
+  printf("Digite o preço do veículo: ");
+  scanf("%f", &precoi);
+
+  imp = (precoi*0.45);
+  lucrod = (precoi*0.12);
+  precof = precoi + imp + lucrod;
+
+  printf("O preço fianl do veículo é : R$ %3.1f\n", precof);
+  printf("Imposto: R$ %3.1f\n", imp);
+  printf("Lucro do distribuidor: R$ %3.1f", lucrod);
+
+  return 0;
+}
