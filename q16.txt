@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  float x1, x2, x3, y1, y2, y3, l1, l2, l3;
+
+  printf("Digite o P1, x: ");
+  scanf("%f", &x1);
+  printf("Digite o P2, y: ");
+  scanf("%f", &y1);
+  printf("Digite o P2, x: ");
+  scanf("%f", &x2);
+  printf("Digite o P2, y: ");
+  scanf("%f", &y2);
+  printf("Digite o P3, x: ");
+  scanf("%f", &x3);
+  printf("Digite o P3, y: ");
+  scanf("%f", &y3);
+
+  l1 = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+  l2 = sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+  l3 = sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
+  
+  if(l1 < l2+l3){
+    printf("Esses pontos formam um triângulo ");
+  }
+  else{
+    printf("Esses pontos NAO formam um triângulo.\n");
+    goto end;
+  }
+
+  if(l1 == l2 && l2 == l3){
+    printf("equilátero.\n");
+  }else{
+    if(l1 == l2 || l2 == l3 || l2 == l3){
+      printf("isóceles");
+    }
+    else{
+      printf("escaleno");
+    }
+  }
+
+  end:
+  return 0;
+}
