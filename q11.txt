@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+  float latao, cobre, zinco;
+
+  printf("Qual a quantidade de latão desejada, em quilos?\n");
+  scanf("%f", &latao);
+
+  cobre = latao*0.70;
+  zinco = latao*0.30;
+
+  printf("Serão necessários %3.1f kg de cobre, e %3.1f kg de zinco para fazer %3.1f kg de latão\n", cobre, zinco, latao); 
+
+  return 0;
+}
