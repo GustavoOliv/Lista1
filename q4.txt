@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+  int x, y, quo, resto;
+
+  printf("Digite o valor de x: ");
+  scanf("%d", &x);
+  printf("Digite o valor de y: ");
+  scanf("%d", &y);
+
+  quo = x/y;
+  resto = x%y;
+
+  printf("A divisão é: %d\n", quo);
+  printf("O resto da divisão é: %d\n", resto);
+  
+  return 0;
+}
