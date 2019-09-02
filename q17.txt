@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+  int i, num, soma = 0, cont = 0;
+
+  for(i = 0; i < 4; i++){
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+    if(num % 2 == 0){
+      soma = soma + num;
+      cont = cont + 1;
+    }
+  }
+  if(cont == 0){
+    printf("Sem números pares para somar\n");
+    goto end;
+  }
+
+  printf("A somas dos números pares é: %d", soma);  
+
+  end:
+
+  return 0;
+}
