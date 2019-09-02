@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+  int anos, Qcig, cigT1, cigT2;
+  float preco, precoT = 0;
+
+  printf("A quantos anos você fuma? ");
+  scanf("%d", &anos);
+
+  printf("Quantos cigarros você fuma por dia? ");
+  scanf("%d", &Qcig);
+
+  printf("Quanto custa a carteira de cigarros? ");
+  scanf("%f", &preco);
+
+  cigT1 = Qcig*365;
+  cigT2 = cigT1*anos;
+  precoT = (cigT2/20)*preco;
+  //uma carteira tem 20 cigarros//
+
+  printf("Você gastou um aproximadamente %4.2f reais em cigarros", precoT);
+  return 0;
+}
